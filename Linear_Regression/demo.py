@@ -24,7 +24,7 @@ def step_gradient(b_current, m_current, points, learningRate):
         m_gradient += -(2/N) * x * (y - ((m_current * x) + b_current))
     new_b = b_current - (learningRate * b_gradient)
     new_m = m_current - (learningRate * m_gradient)
-    return [new_b, new_m]
+    return new_b, new_m
 
 def gradient_descent_runner(points, starting_b, starting_m, learning_rate, num_iterations):
     b = starting_b
